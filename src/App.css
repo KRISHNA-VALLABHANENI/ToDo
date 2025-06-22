@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to right, #0077b6, #90e0ef);
+    /* Prevent scrollbars on overflow */
+}
+
+.appContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.todoApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 90vw;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.297);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.title {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #023e8a
+}
+
+/* Scrollable task area */
+.tasks {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Task item */
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.tasks {
+    overflow: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.tasks::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.clear {
+
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.add-icon {
+    width: 22px;
+    height: 22px;
+    color: white;
+    filter: invert(100%) sepia(1) hue-rotate(200deg);
+    /* Optional: change color */
+}
+
+
+
+.addTaskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.clear {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    margin-right: 0.7rem;
+    font-size: 1rem;
+}
+
+.delete {
+    margin-left: 10px;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    filter: invert(100%) sepia(1) hue-rotate(200deg);
+}
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    filter: invert(100%) sepia(1) hue-rotate(200deg);
+}
+
+
+
+.taskItem {
+    flex: 1;
+}
+
+input:focus {
+    outline: 1.5px solid #5596bc;
+}
