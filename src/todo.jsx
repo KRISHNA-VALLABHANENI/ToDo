@@ -1,4 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import editIcon from './assets/edit.svg';
+import deleteIcon from './assets/delete.svg';
+import addIcon from './assets/add.svg';
 
 export default function Todo() {
 
@@ -93,9 +96,9 @@ export default function Todo() {
                                 >
                                     {task.text}
                                 </li>
-                                <button className="edit btn btn-primary" onClick={() => edit(index)}> <img src="/edit.svg" alt="Edit" className="edit-icon" />
+                                <button className="edit btn btn-primary" onClick={() => edit(index)}> <img src={editIcon} alt="Edit" className="edit-icon" />
                                 </button>
-                                <button onClick={() => deleteTask(index)} className="delete btn btn-danger"><img src="/delete.svg" alt="delete" className="delete-icon" /></button>
+                                <button onClick={() => deleteTask(index)} className="delete btn btn-danger"><img src={deleteIcon} alt="delete" className="delete-icon" /></button>
                             </p>
                         </div>
                     ))}
@@ -119,11 +122,11 @@ export default function Todo() {
 
                     {/* Add tasks */}
                     <button className="add btn btn-primary" onClick={add}>
-                        <img src="/add.svg" alt="add" className='add-icon' />
+                        <img src={addIcon} alt="add" className='add-icon' />
                     </button>
 
                     {/* Clear tasks */}
-                    <button onClick={clearTasks} className="clear btn btn-danger"><img src="/delete.svg" height="20" width="20" alt="delete" className="delete-icon" /></button>
+                    <button onClick={clearTasks} className="clear btn btn-danger"><img src={deleteIcon} height="20" width="20" alt="delete" className="delete-icon" /></button>
                 </div>
             </div>
         </div>
